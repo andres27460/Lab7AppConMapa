@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_driver"
+    app:startDestination="@id/driverFragment">
+    <fragment
+        android:id="@+id/driverFragment"
+        android:name="com.example.ProyectoFinalApp30Firebase.driver.DriverFragment"
+        android:label="driver_fragment"
+        tools:layout="@layout/driver_fragment" >
+        <action
+            android:id="@+id/action_driverFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.ProyectoFinalApp30Firebase.driver.options.CommentsFragment"
+        android:label="comments_fragment"
+        tools:layout="@layout/comments_fragment" >
+        <action
+            android:id="@+id/action_commentsFragment_to_driverFragment"
+            app:destination="@id/driverFragment" />
+    </fragment>
+</navigation>
